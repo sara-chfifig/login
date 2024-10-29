@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login pour chantier</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form id="loginForm">
+        <h1>login</h1>
+        <div class="input-box">
+          <input type="text" id="username" placeholder="Username" required />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" id="password" placeholder="Password" required />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+       
+        <button type="submit" class="btn">se connecter</button>
+        
+         
+      </form>
+    </div>
+    <script src="login.js"></script>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        
+        // Get the username and password values
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        // Check if the username and password are correct (this is just a simple example)
+        if (username === 'Jawad'||username === 'directeure' && password === '123456'|| password === '123456789') {
+          // Redirect to the Todo List page (e.g., todo.html)
+          window.location.href = 'index.html'; // Update this to the actual name of your Todo List HTML file
+        } else {
+          alert('Invalid username or password'); // Show an error message
+        }
+      });
+    </script>
+  </body>
+</html>
